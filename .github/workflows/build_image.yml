@@ -78,7 +78,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: wakareadmestats/waka-readme-stats
+          images: ${{ secrets.DOCKERHUB_USERNAME }}/waka-readme-stats
           tags: |
             type=ref,event=branch
             type=ref,event=pr
